@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snapchat Location History</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex">
+        <div class="py-4 px-2" style="width: 300px;position:relative;z-index:10;">
+            <h2 class="text-2xl pb-4">Snapchat Location Viewer</h2>
+            <p>Upload the <span class="bg-gray-200 p-1 rounded">location_history.json</span> file from your snapchat data found in the JSON folder.</p>
+            <div class="my-4">
+                <input type="file" value="Import" id="jsonFile">
+                <button id="import" class="px-4 py-1 rounded bg-green-500 text-white mt-2">Show</button>
+            </div>
+            <div id="location-selection"></div>
+        </div>
+        <div id="map" class="flex-auto"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
