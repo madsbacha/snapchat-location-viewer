@@ -31,7 +31,7 @@ window.addEventListener('resize', (event) => {
     mapEl.style = `height:${window.innerHeight}px;width:${window.innerWidth-300}px;position:relative;`;
 })
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 const markerLayer = L.layerGroup().addTo(map)
